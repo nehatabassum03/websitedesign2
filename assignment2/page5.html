@@ -89,7 +89,7 @@
           <label for = "dob"><b>Date Of Birth</b></label><br>
           <input type = "text" name = "dob" id = "dob" value="July 16, 1999" required>
           <span id="container"><button type="submit" id="editbutton" onclick="document.getElementById('dob').value=''"><i class="fa fa-pencil" style="color: #333333b2;"></i></button></span><br><br><br>
-          <input type = "submit" name = "submit" id="button1" value = "Submit">
+          <input type = "submit" name = "submit" id="button1" value = "Save">
           <input type = "reset" name = "submit" id="button2" value = "Cancel">
         </form>
       <script>
@@ -97,7 +97,7 @@
         return true;
       }
       function submitForm() {
-        window.alert("Form Submitted");
+        window.alert("Changes saved successfully");
       }
     </script>
       </div>
