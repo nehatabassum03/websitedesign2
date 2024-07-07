@@ -1,1 +1,105 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topbar">
+        <div id="search" role="search">
+            <input type="search" id="query" name="q" placeholder="Search in My Account" aria-label="search through the site content">
+            <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+        </div>
+    </div>
+    <nav>
+        <div>
+            <span class="circle">W
+            </span>
+                Workspace
+        </div>
+        <ul class="navbar">
+            <span>
+            <li><a class="" href="page1.html" onClick="activehome()" id="home"><i class="fa fa-home"></i>  Home</a></li>
+            <li><a class="" href="page2.html" onClick="activecustomers()" id="customers"><i class="fa fa-users"></i>Customers</a></li>
+            <li><a class="" href="page3.html" onClick="activedepartments()" id="departments"><i class="fa fa-address-card"></i>Departments</a></li>
+            <li><a class="" href="page4.html" onClick="activemedia()" id="media"><i class="fa fa-image"></i> Media</a></li>
+            </span>
+            <span>
+            <li><a class="active class5" href="#account" onClick="activeaccount()" id="account"><i class="fa fa-user"></i> My Account</a></li>
+            </span>
+        </ul>
+    </nav>
+    <script type="text/javascript">
+        function activehome() {
+          document.getElementById("home").classList.add("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activecustomers() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.add("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activedepartments() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.add("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activemedia() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.add("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activeaccount() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.add("active");
+        }
+      </script>
+      <div class="imageedittable">
+      <div class="imageeditdiv">
+        <img src="bg.webp" >
+        <span id="container" style="margin-top: 270px;"><button type="submit" id="editbutton"><i class="fa fa-pencil" style="color: #333333b2;"></i></button></span><br><br><br>
+      </div>
+      </div>
+      <div class="formdiv">
+        <form action = "javascript:submitForm()" onSubmit = "return validate()">
+          <label for = "name"><b>NAME </b></label><br>
+          <input type = "text" name = "name" id = "name" value="John Doe" required>
+          <span id="container"><button type="submit" id="editbutton" onclick="document.getElementById('name').value=''"><i class="fa fa-pencil" style="color: #333333b2;"></i></button></span><br><br><br>
+          <label for = "email"><b>EMAIL</b></label><br>
+          <input type = "email" name = "email" id = "email" value="John@gmail.com" required>
+          <span id="container"><button type="submit" id="editbutton" onclick="document.getElementById('email').value=''"><i class="fa fa-pencil" style="color: #333333b2;"></i></button></span><br><br><br>
+          <label for = "phoneno"><b>Phone Number</b></label><br>
+          <input type = "number" name = "phoneno" id = "phoneno" value="9897654567" required>
+          <span id="container"><button type="submit" id="editbutton" onclick="document.getElementById('phoneno').value=''"><i class="fa fa-pencil" style="color: #333333b2;"></i></button></span><br><br><br>
+          <label for = "dob"><b>Date Of Birth</b></label><br>
+          <input type = "text" name = "dob" id = "dob" value="July 16, 1999" required>
+          <span id="container"><button type="submit" id="editbutton" onclick="document.getElementById('dob').value=''"><i class="fa fa-pencil" style="color: #333333b2;"></i></button></span><br><br><br>
+          <input type = "submit" name = "submit" id="button1" value = "Submit">
+          <input type = "reset" name = "submit" id="button2" value = "Cancel">
+        </form>
+      <script>
+        function validate() {
+        return true;
+      }
+      function submitForm() {
+        window.alert("Form Submitted");
+      }
+    </script>
+      </div>
+      </body>
+      </html>
