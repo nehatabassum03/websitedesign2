@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topbar">
+        <div id="search" role="search">
+            <input type="search" id="query" name="q" placeholder="Search in Home" aria-label="search through the site content">
+            <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+        </div>
+    </div>
+    <nav>
+        <div>
+            <span class="circle">W
+            </span>
+                Workspace
+        </div>
+        <ul class="navbar">
+            <span>
+            <li><a class="active class2" href="#home" onClick="activehome()" id="home"><i class="fa fa-home"></i>  Home</a></li>
+            <li><a class="" href="page2.html" onClick="activecustomers()" id="customers"><i class="fa fa-users"></i>Customers</a></li>
+            <li><a class="" href="page3.html" onClick="activedepartments()" id="departments"><i class="fa fa-address-card"></i>Departments</a></li>
+            <li><a class="" href="page4.html" onClick="activemedia()" id="media"><i class="fa fa-image"></i> Media</a></li>
+            </span>
+            <span>
+            <li><a class="" href="page5.html" onClick="activeaccount()" id="account"><i class="fa fa-user"></i> My Account</a></li>
+            </span>
+        </ul>
+    </nav>
+    <script type="text/javascript">
+        function activehome() {
+          document.getElementById("home").classList.add("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activecustomers() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.add("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activedepartments() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.add("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activemedia() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.add("active");
+          document.getElementById("account").classList.remove("active");
+        }
+        function activeaccount() {
+          document.getElementById("home").classList.remove("active");
+          document.getElementById("customers").classList.remove("active");
+          document.getElementById("departments").classList.remove("active");
+          document.getElementById("media").classList.remove("active");
+          document.getElementById("account").classList.add("active");
+        }
+      </script>
+    <div class="divbox">
+    <div class="box1">
+            <p>New Customers</p>
+            <h2>24</h2>
+    </div>
+    <div class="box2">
+        <p>Department Activity</p>
+        <h2>434<small>+</small></h2>
+    </div>
+    <div class="box3">
+        <p>Total Media Size</p>
+        <h2>10<small>TB</small></h2>
+    </div>
+    </div>
 
+   <div class="customerstable">
+        <p class="customerheader">Customers</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Department ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Total Media Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JRYT456</td>
+                    <td>UHDSG</td>
+                    <td>John</td>
+                    <td>skadj@gmail.com</td>
+                    <td>2 GB</td>
+                </tr>
+                <tr>
+                    <td>JHSAG636</td>
+                    <td>ASDFJ</td>
+                    <td>Jane</td>
+                    <td>skadj@gmail.com</td>
+                    <td>0.4 GB</td>
+                </tr>
+                <tr>
+                    <td>ASJHSA77</td>
+                    <td>SAFEF</td>
+                    <td>Bob</td>
+                    <td>skadj@gmail.com</td>
+                    <td>200 GB</td>
+                </tr>
+                <tr>
+                    <td>KSAHKJ366</td>
+                    <td>AFEEE</td>
+                    <td>Mary</td>
+                    <td>skadj@gmail.com</td>
+                    <td>50 GB</td>
+                </tr>
+                <tr>
+                    <td>SAKJHD35</td>
+                    <td>REYER</td>
+                    <td>Karan</td>
+                    <td>skadj@gmail.com</td>
+                    <td>45 GB</td>
+                </tr>
+                <tr>
+                    <td>KKHUASU33</td>
+                    <td>HJHGF</td>
+                    <td>Chrissy</td>
+                    <td>skadj@gmail.com</td>
+                    <td>500 GB</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="departmentstable">
+        <p class="departmentheader">Departments</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department ID</th>
+                    <th>Department Incharge</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Total Media Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JRYT456</td>
+                    <td>UHDSG</td>
+                    <td>John</td>
+                    <td>23</td>
+                    <td>2 GB</td>
+                </tr>
+                <tr>
+                    <td>JHSAG636</td>
+                    <td>ASDFJ</td>
+                    <td>Jane</td>
+                    <td>45</td>
+                    <td>0.4 GB</td>
+                </tr>
+                <tr>
+                    <td>ASJHSA77</td>
+                    <td>SAFEF</td>
+                    <td>Bob</td>
+                    <td>76</td>
+                    <td>200 GB</td>
+                </tr>
+                <tr>
+                    <td>KSAHKJ366</td>
+                    <td>AFEEE</td>
+                    <td>Mary</td>
+                    <td>87</td>
+                    <td>50 GB</td>
+                </tr>
+                <tr>
+                    <td>SAKJHD35</td>
+                    <td>REYER</td>
+                    <td>Karan</td>
+                    <td>76</td>
+                    <td>45 GB</td>
+                </tr>
+                <tr>
+                    <td>KKHUASU33</td>
+                    <td>HJHGF</td>
+                    <td>Chrissy</td>
+                    <td>78</td>
+                    <td>500 GB</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mediatable">
+        <p class="mediaheader">Media</p>
+    <div class="mediadiv">
+        <div class="media"><span>Audio</span><br><br><br><br><br><p class="mediasize">14TB</p>
+        </div>
+        <div class="media"><span>Video</span><br><br><br><br><br><p class="mediasize">14TB</p>
+        </div>
+        <div class="media"><span>Images</span><br><br><br><br><br><p class="mediasize">14TB</p>
+        </div>
+        <div class="media"><span>Files</span><br><br><br><br><br><p class="mediasize">14TB</p>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
